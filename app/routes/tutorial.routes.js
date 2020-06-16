@@ -11,6 +11,10 @@ module.exports = app => {
   
   // Retrieve all published Tutorials
   router.get("/published", tutorials.findAllPublished);
+
+  router.get("/kesyn", (req, res) => {
+    res.json({ message: "Cenas" });
+  });
   
   // Retrieve a single Tutorial with id
   router.get("/:id", tutorials.findOne);
@@ -23,6 +27,7 @@ module.exports = app => {
   
   // Create a new Tutorial
   router.delete("/", tutorials.deleteAll);
-  
+
+
   app.use('/api/tutorials', router);
 };
