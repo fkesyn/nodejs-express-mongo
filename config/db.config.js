@@ -1,3 +1,3 @@
 module.exports = {
-  url: "mongodb://kesyn:Boisana26*@ds135866.mlab.com:35866/heroku_sd7nb215"
+  url: process.env.MONGODB_URI  || "mongodb://localhost:27017/bezkoder_db"
 };
